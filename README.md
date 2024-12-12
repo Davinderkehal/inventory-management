@@ -1,2 +1,1 @@
-# inventory-management
-A simple inventory management system.
+# Inventory Management System
