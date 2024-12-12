@@ -58,3 +58,13 @@ store.addProduct(banana);
 store.addProduct(milk);
 store.addProduct(cheese);
 store.addProduct(bread);
+function updateInventoryUI() {
+    const inventoryList = document.getElementById('inventory-list');
+    inventoryList.innerHTML = '';
+    store.inventory.forEach(product => {
+        const listItem = document.createElement('li');
+        listItem.textContent = product.toString();
+        inventoryList.appendChild(listItem);
+    });
+    document.getElementById('total-value-before').textContent = `Total Inventory Value (Before Discount): $${store.getInventoryValue().toFixed(2)}`;
+}
