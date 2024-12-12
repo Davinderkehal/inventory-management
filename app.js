@@ -68,3 +68,7 @@ function updateInventoryUI() {
     });
     document.getElementById('total-value-before').textContent = `Total Inventory Value (Before Discount): $${store.getInventoryValue().toFixed(2)}`;
 }
+function applyDiscountAndUpdateUI() {
+    ProductProperties.applyDiscount(store.inventory, 0.15);
+    document.getElementById('total-value-after').textContent = `Total Inventory Value (After Discount): $${store.getInventoryValue().toFixed(2)}`;
+}
