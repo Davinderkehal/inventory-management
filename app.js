@@ -46,3 +46,15 @@ class Store {
         return this.inventory.find(product => product.name === name) || null;
     }
 }
+const store = new Store();
+const apple = new ProductProperties('Apple', 2.5, 50);
+const banana = new ProductProperties('Banana', 1.2, 100);
+const milk = new PerishableProductProperties('Milk', 1.5, 10, '2024-12-31');
+const cheese = new PerishableProductProperties('Cheese', 5.0, 20, '2025-01-15');
+const bread = new ProductProperties('Bread', 2.0, 30);
+
+store.addProduct(apple);
+store.addProduct(banana);
+store.addProduct(milk);
+store.addProduct(cheese);
+store.addProduct(bread);
