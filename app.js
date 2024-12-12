@@ -72,3 +72,14 @@ function applyDiscountAndUpdateUI() {
     ProductProperties.applyDiscount(store.inventory, 0.15);
     document.getElementById('total-value-after').textContent = `Total Inventory Value (After Discount): $${store.getInventoryValue().toFixed(2)}`;
 }
+function searchProduct() {
+    const searchName = document.getElementById('search-name').value;
+    const result = store.findProductByName(searchName);
+    const searchResult = document.getElementById('search-result');
+    if (result) {
+        searchResult.textContent = `Found: ${result.toString()}`;
+    } else {
+        searchResult.textContent = 'Product not found.';
+    }
+}
+document.getElementById('search-btn').addEventListener('click', searchProduct);
