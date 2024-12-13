@@ -34,7 +34,7 @@ ul {
 }
 
 button {
-    background-color: #007BFF;
+    background-color: #c969e6;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -43,7 +43,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c645df;
 }
 
 #search-result {
