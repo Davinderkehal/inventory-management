@@ -52,12 +52,16 @@ const banana = new ProductProperties('Banana', 1.2, 100);
 const milk = new PerishableProductProperties('Milk', 1.5, 10, '2024-12-31');
 const cheese = new PerishableProductProperties('Cheese', 5.0, 20, '2025-01-15');
 const bread = new ProductProperties('Bread', 2.0, 30);
+const pineapple = new ProductProperties('Pineapple', 2.3, 40);
+const orange = new ProductProperties('Orange', 4.0, 80);
 
 store.addProduct(apple);
 store.addProduct(banana);
 store.addProduct(milk);
 store.addProduct(cheese);
 store.addProduct(bread);
+store.addProduct(pineapple);
+store.addProduct(orange);
 function updateInventoryUI() {
     const inventoryList = document.getElementById('inventory-list');
     inventoryList.innerHTML = '';
